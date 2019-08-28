@@ -18,11 +18,10 @@
 </template>
 
 <script>
-import { myName, headInfo } from '@/data/info.js'
+import info from '@/data/info.js'
 
 export default {
   data() {
-    let myName = myName || 'Lorem.';
     let baseInfos = [
       {label: '性别', desc: 'xx'},
       {label: '生日', desc: 'xxxx.xx.xx'},
@@ -33,8 +32,8 @@ export default {
       {label: '邮箱', desc: 'xxxxx@qq.com'}
     ];
     return {
-      myName,
-      baseInfos: headInfo || baseInfos
+      myName: info.myName || 'Lorem.',
+      baseInfos: info.headInfo || baseInfos
       // baseInfos
     }
   }

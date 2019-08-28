@@ -3,12 +3,13 @@
   <h3 class="sec-p-title small-title">
     {{ parDesc.title }}
   </h3>
-  <ul>
+  <ul class="sec-p-list">
     <li class="sec-p-item" v-for="(skill, index) in parDesc.list" :key="index">
       <i class="iconfont icon-tuding1" v-if="isMulti"></i>
       <span v-if="isObject(skill)">
         <strong class="sec-p-label" v-if="skill.label">{{ skill.label }}</strong>
-        <span :class="{'sec-p-desc': true, 'desc-indent': skill.multi}">{{ skill.desc }}</span>
+        <a v-if="skill.isLink" :href="skill.desc" target="_blank" :class="{'sec-p-desc': true, 'desc-indent': skill.multi}">{{ skill.desc }}</a>
+        <span v-else :class="{'sec-p-desc': true, 'desc-indent': skill.multi}">{{ skill.desc }}</span>
       </span>
       <span v-else class="sec-p-desc">{{ skill }}</span>
     </li>
@@ -38,25 +39,28 @@ export default {
 
 .sec-p {
   padding-left: 20px;
-  ul .sec-p-item {
-    position: relative;
-    &:nth-of-type(even) {
-      background-color: #fee;
-    }
-    // 列表每行前面的图标
-    .iconfont {
-      margin-right: 10px;
-    }
-    .sec-p-label {
-      padding-right: 10px;
-      &::after {
-        content: ":";
-        padding-left: 2px;
+  .sec-p-list {
+    line-height: 1.5;
+    .sec-p-item {
+      position: relative;
+      &:nth-of-type(even) {
+        background-color: #fee;
       }
-    }
-    .desc-indent {
-      display: inline-block;
-      text-indent: 2em;
+      // 列表每行前面的图标
+      .iconfont {
+        margin-right: 10px;
+      }
+      .sec-p-label {
+        padding-right: 10px;
+        &::after {
+          content: ":";
+          padding-left: 2px;
+        }
+      }
+      .desc-indent {
+        display: inline-block;
+        text-indent: 2em;
+      }
     }
   }
 }
