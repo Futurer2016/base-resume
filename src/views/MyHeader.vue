@@ -33,7 +33,7 @@ export default {
       {label: '邮箱', desc: 'xxxxx@qq.com'}
     ];
     return {
-      myName
+      myName,
       // baseInfos: headInfo || baseInfos
       baseInfos
     }
