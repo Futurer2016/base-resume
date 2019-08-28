@@ -34,8 +34,8 @@ export default {
     ];
     return {
       myName,
-      // baseInfos: headInfo || baseInfos
-      baseInfos
+      baseInfos: headInfo || baseInfos
+      // baseInfos
     }
   }
 }

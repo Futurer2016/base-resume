@@ -79,8 +79,8 @@ export default {
       },
     ];
     return {
-      // list: info.mainInfo || list
-      list
+      list: info.mainInfo || list
+      // list
     }
   },
   components: {
