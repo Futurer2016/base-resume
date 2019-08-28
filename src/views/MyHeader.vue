@@ -4,7 +4,7 @@
     <img src="./../assets/img/head.jpg" alt="">
   </div>
   <div class="my-info">
-    <h1 class="my-name small-title">姜来</h1>
+    <h1 class="my-name small-title">{{ myName }}</h1>
     <div class="my-base-info">
       <ul class="clearfix">
         <li class="info-box" v-for="({label, desc}, index) in baseInfos" :key="index">
@@ -18,10 +18,11 @@
 </template>
 
 <script>
-import { headInfo } from '@/data/info.js'
+import { myName, headInfo } from '@/data/info.js'
 
 export default {
   data() {
+    let myName = myName || 'Lorem.';
     let baseInfos = [
       {label: '性别', desc: 'xx'},
       {label: '生日', desc: 'xxxx.xx.xx'},
@@ -32,6 +33,7 @@ export default {
       {label: '邮箱', desc: 'xxxxx@qq.com'}
     ];
     return {
+      myName
       // baseInfos: headInfo || baseInfos
       baseInfos
     }
