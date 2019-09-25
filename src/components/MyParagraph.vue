@@ -24,8 +24,6 @@
 export default {
   name: 'my-paragraph',
   props: ['list'],
-  components: {
-  },
   methods: {
     isObject(val) {
       return val != null && Object.prototype.toString.call(val) == '[object Object]'
@@ -34,9 +32,6 @@ export default {
       let flag = (item) => typeof item == 'string' || item.label || (! item.title && item.desc);
       return list.filter(flag).length > 1;
     }
-  },
-  computed: {
-    
   }
 }
 </script>
