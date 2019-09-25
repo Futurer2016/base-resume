@@ -32,7 +32,11 @@ export default {
   // background-color: #fcc;
 }
 .small-title {
-  line-height: 3;
+  position: absolute;
+  left: -120px;
+  top: 0;
+  margin-top: 20px;
+  max-width: 120px;
   font-size: 16px;
   font-weight: 700;
   color: $blue;

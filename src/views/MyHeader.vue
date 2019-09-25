@@ -54,7 +54,7 @@ export default {
   overflow: hidden;
   padding-left: 40px;
   .my-name {
-    padding-top: 10px;
+    position: static;
     line-height: 3;
     font-size: 30px;
   }

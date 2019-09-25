@@ -44,13 +44,19 @@ export default {
           {
             title: '2018.04至今',
             list: [
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+              {
+                title: 'xxx公司',
+                desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+              }
             ]
           },
           {
             title: '2017.05-2018.03',
             list: [
-              'Lorem ipsum dolor sit amet.'
+              {
+                label: 'xxx公司',
+                desc: 'Lorem ipsum dolor sit amet.'
+              }
             ]
           }
         ]

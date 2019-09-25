@@ -3,18 +3,18 @@
   <div class="sec-line"></div>
   <h2 class="sec-title">{{ secs.title }}</h2>
   <div class="sec-main">
-    <my-paragraph v-for="(parDesc, index) in secs.list" :key="index" :parDesc="parDesc"></my-paragraph>
+    <my-subject v-for="(parDesc, index) in secs.list" :key="index" :parDesc="parDesc"></my-subject>
   </div>
 </section>
 </template>
 
 <script>
-import MyParagraph from './MyParagraph'
+import MySubject from './MySubject'
 
 export default {
   props: ['secs'],
   components: {
-    MyParagraph
+    MySubject
   }
 }
 </script>
@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 @import './../assets/css/common/vars.scss';
 .sec {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   .sec-line {
     margin-top: 5px;
     border-top: 5px dashed $blue;
@@ -38,7 +38,8 @@ export default {
     background-color: $blue;
   }
   .sec-main {
-    overflow: hidden;
+    // overflow: hidden;
+    margin-left:  120px;
   }
 }
 
